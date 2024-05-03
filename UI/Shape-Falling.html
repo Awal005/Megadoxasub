@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes Falling</title>
+
+    <style>
+        @keyframes mousebounce-up {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                -webkit-transform: translateY(-120px);
+                transform: translateY(-120px);
+            }
+            100% {
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes running-in {
+            0%{
+                transform: translate(0, 0);
+            }
+            50% {
+                -webkit-transform: translate(-10px, 150px);
+                transform: translate(-10px, 150px);
+            }
+            100% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes rotate360 {
+            0% {
+                -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+            }
+            100% {
+                -webkit-transform: rotateZ(-360deg);
+                transform: rotateZ(-360deg);
+            }
+        }
+        @keyframes animationFramesOne {
+            0% {
+                -webkit-transform: translate(0px, 0px) rotate(0deg);
+                        transform: translate(0px, 0px) rotate(0deg);
+            }
+            20% {
+                -webkit-transform: translate(73px, -1px) rotate(36deg);
+                        transform: translate(73px, -1px) rotate(36deg);
+            }
+            40% {
+                -webkit-transform: translate(141px, 72px) rotate(72deg);
+                        transform: translate(141px, 72px) rotate(72deg);
+            }
+            60% {
+                -webkit-transform: translate(83px, 122px) rotate(108deg);
+                        transform: translate(83px, 122px) rotate(108deg);
+            }
+            80% {
+                -webkit-transform: translate(-40px, 72px) rotate(144deg);
+                        transform: translate(-40px, 72px) rotate(144deg);
+            }
+            100% {
+                -webkit-transform: translate(0px, 0px) rotate(0deg);
+                        transform: translate(0px, 0px) rotate(0deg);
+            }
+        }
+
+        @keyframes opacityChange {
+            0%{
+                opacity: 1;
+            }
+            20%{
+                opacity: 0.8;
+            }
+            40%{
+                opacity: 0.6;
+            }
+            60%{
+                opacity: 0.4;
+            }
+            80%{
+                opacity: 0.6;
+            }
+            100%{
+                opacity: 0.8;
+            }
+        }
+
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        main div:nth-child(1){
+            position: relative;
+            top: 340px;
+            animation: mousebounce-up 7s infinite;
+        }
+        main div:nth-child(2){
+            position: relative;
+            top: 340px;
+            animation: running-in 7s infinite;
+        }
+        main div:nth-child(3){
+            position: relative;
+            top: 420px;
+            animation: rotate360 7s infinite;
+
+        }
+        main div:nth-child(4){
+            position: relative;
+            top: 150px;
+            animation: animationFramesOne 7s infinite;
+        }
+
+        main div:nth-child(5){
+            position: relative;
+            top: 470px;
+            animation: opacityChange 3s infinite;
+        }
+        main div:nth-child(6){
+            position: relative;
+            top: 500px;
+            animation: rotate360 7s infinite;
+        }
+        main div:nth-child(7){
+            position: relative;
+            top: 500px;
+        }
+
+        .circle{
+            background: #C5EED0;
+            animation: rotate 7s infinite linear;
+            height: 50px;
+            width: 50px;
+            border-radius: 10pc;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+
+        <!-- Circle -->
+        <div class="circle">
+            <p>M</p>
+        </div>
+
+        <div class="circle">
+            <p>M</p>
+        </div>
+
+        <div>
+            <!-- Triangle -->
+            <img src="../media/triangle.png" alt="">
+        </div>
+
+        <div>
+            <img src="../media/triangle.png" alt="">
+        </div>
+
+        
+
+        <div class="circle">
+            <p>M</p>
+        </div>
+
+        <div>
+            <img src="../media/triangle.png" alt="">
+        </div>
+
+        <div class="circle">
+            <p>M</p>
+        </div>
+    </main>
+</body>
+</html>
